@@ -3,7 +3,7 @@
     Enable searching in your app with the Search Delegate
 
 
-### implementing the SearchDelegate class
+### implement the SearchDelegate class
       Override these 4 methods.
 ```dart
   CustomSearchDelegate extends SearchDelegate {
@@ -50,7 +50,7 @@ class _SearchHomeState extends State<SearchHome> {
             child: Padding(
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Text(
-              'This is a showSearch demo where we will implement the showSearch delegate. '),
+              'Implementing the showSearch() to enable searching in our app'),
         )));
   }
 }
