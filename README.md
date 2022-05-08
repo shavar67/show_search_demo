@@ -57,7 +57,5 @@ class _SearchHomeState extends State<SearchHome> {
  ```
  
 
-https://user-images.githubusercontent.com/23090608/167276254-b64a0e62-b29c-43e0-b522-2d7ab4cd2c7d.mp4
-
 
  
