@@ -23,8 +23,7 @@ class _SearchHomeState extends State<SearchHome> {
         body: const Center(
             child: Padding(
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-          child: Text(
-              'This is a showSearch demo where we will implement the showSearch delegate.'),
+          child: Text('Start searching for movies now'),
         )));
   }
 }
