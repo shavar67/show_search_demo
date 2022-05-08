@@ -8,7 +8,7 @@ import '../services/request_movie.dart';
 
 class CustomSearchDelegate extends SearchDelegate {
   @override
-  List<String> movies = [];
+
   // *! This section is to clear the query
   @override
   List<Widget>? buildActions(BuildContext context) {
@@ -47,9 +47,14 @@ class CustomSearchDelegate extends SearchDelegate {
                   return ExpansionTile(
                     children: [ListTile(title: Text(result.year))],
                     title: ListTile(
-                      leading: CircleAvatar(
-                        backgroundImage: NetworkImage('${result.poster}'),
-                      ),
+                      // *! check to see if the poster image is 'N/A'
+                      // ** Based on this we want to return an image or an empty circle avatar
+                      leading: result.poster.toString() == 'N/A'
+                          ? const CircleAvatar()
+                          : CircleAvatar(
+                              backgroundImage:
+                                  NetworkImage('${Uri.parse(result.poster)}'),
+                            ),
                       title: Text(result.title),
                       onTap: () {},
                     ),
@@ -57,8 +62,7 @@ class CustomSearchDelegate extends SearchDelegate {
                 });
           }
           if (snapshot.hasError) {
-            return const Center(
-                child: Text('something went wrong try searching again'));
+            return const Center(child: Text('try searching for another title'));
           }
           return const Center(child: CupertinoActivityIndicator());
         });
@@ -78,8 +82,11 @@ class CustomSearchDelegate extends SearchDelegate {
                   return ExpansionTile(
                     children: [ListTile(title: Text(result.year))],
                     title: ListTile(
-                      leading: CircleAvatar(
-                          backgroundImage: NetworkImage('${result.poster}')),
+                      leading: result.poster.toString() == 'N/A'
+                          ? const CircleAvatar()
+                          : CircleAvatar(
+                              backgroundImage:
+                                  NetworkImage('${Uri.parse(result.poster)}')),
                       title: Text(result.title),
                       onTap: () {},
                     ),
@@ -88,8 +95,7 @@ class CustomSearchDelegate extends SearchDelegate {
           }
           if (snapshot.hasError) {
             return const Center(
-                child: Text(
-                    'something went wrong, try searching for a movie again.'));
+                child: Text('movies you search for will appear here.'));
           }
           return const Center(child: CupertinoActivityIndicator());
         });
