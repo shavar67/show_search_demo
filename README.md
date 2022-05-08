@@ -26,7 +26,7 @@
   }
 ```
 
-#### Implementing the custom seearch delegate class  
+#### Implementing the custom search delegate class  
 ```dart
 class SearchHome extends StatefulWidget {
   const SearchHome({Key? key}) : super(key: key);
