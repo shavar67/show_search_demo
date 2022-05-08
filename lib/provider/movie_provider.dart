@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 import '../constants/ApiConstants.dart';
 import '../model/movie_model.dart';
 
+// * * for state management
 class ModelProvider with ChangeNotifier {
   Future<List<MovieModel>> searchMovies(keyword) async {
     String url = ApiConstants.BASEURL + keyword + ApiConstants.APIKEY.trim();

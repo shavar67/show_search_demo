@@ -25,3 +25,6 @@ class MovieModel {
     return data;
   }
 }
+
+
+// ** this is our movie model

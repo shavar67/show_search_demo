@@ -19,10 +19,8 @@ class MovieModelResult {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
-    if (result != null) {
-      data['Search'] = result.map((v) => v.toJson()).toList();
-    }
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['Search'] = result.map((v) => v.toJson()).toList();
 
     return data;
   }
