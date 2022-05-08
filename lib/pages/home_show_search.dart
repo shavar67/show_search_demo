@@ -13,7 +13,7 @@ class _SearchHomeState extends State<SearchHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('ShowSearch Demo'), actions: [
+        appBar: AppBar(title: const Text('Movie App'), actions: [
           IconButton(
               onPressed: () {
                 showSearch(context: context, delegate: CustomSearchDelegate());

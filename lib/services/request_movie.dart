@@ -6,7 +6,7 @@ import '../constants/ApiConstants.dart';
 import '../model/movie_model.dart';
 
 Future<List<MovieModel>> searchMovies(keyword) async {
-  String url = ApiConstants.BASEURL + keyword + ApiConstants.APIKEY.trim();
+  String url = ApiConstants.BASEURL + keyword + ApiConstants.APIKEY;
   Uri uri = Uri.parse(url);
   final response = await http.get(uri);
   if (response.statusCode == 200) {
