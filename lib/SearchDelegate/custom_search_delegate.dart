@@ -88,7 +88,8 @@ class CustomSearchDelegate extends SearchDelegate {
           }
           if (snapshot.hasError) {
             return const Center(
-                child: Text('something went wrong try searching again.'));
+                child: Text(
+                    'something went wrong, try searching for a movie again.'));
           }
           return const Center(child: CupertinoActivityIndicator());
         });
