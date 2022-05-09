@@ -26,7 +26,7 @@
   }
 ```
 
-#### Implementing the custom search delegate class  
+#### Using the custom search delegate  
 ```dart
 class SearchHome extends StatefulWidget {
   const SearchHome({Key? key}) : super(key: key);
